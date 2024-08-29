@@ -1,4 +1,69 @@
 #"linux commands to demonastrate"
 "A.Navigating file system"
 1.pwd #to show present working directory
-2.
+2.mkdir dir1  # create a new directory dir1
+3.cd dir1  # change directory to dir1
+4.ls  #to show the lists of files and directories in the current directory
+5.ls -a #to view hidden files
+6.ls -l #to view detailed information 
+7.cd .. #to go to one directory up
+8.cd ~ #to return to home directory
+9.rmdir directory_name #Remove Directory
+10.rm -r directory_name  #Remove Directory and its Contents
+11.touch filename #Creates an empty file 
+12.cp source_file destination   #Copies files or directories.
+
+"B.File Management"
+1.mv old_name new_name   #Move/Rename a File
+2.rm filename  #Remove a File 
+3.cat filename  #Display File Conten
+4.vi filename #edit a file
+5.tree  #Displays directories and files in a tree-like format.
+6.head -n 20 file_name   #print specified no of lines
+7.chmod   #Changes the permissions of a file or directory.
+8.chown   #Changes the owner of a file or directory.
+9.tar  #Archives files into a tarball (compressed or uncompressed).
+
+
+"C.System Monitoring"
+1.top  #Displays a dynamic, real-time view of system processes, including CPU and memory usage.
+2.ps  #Displays a snapshot of current processes.
+3.df -h  #Check Disk Usage
+4.free -h  #Check Memory Usage 
+5.ifconfig  #Displays network interface configuration.
+
+"D.User and group management"
+1.sudo useradd username  #Add a New User 
+2.sudo passwd username  #Set User Password
+3.sudo userdel username #Deletes a user from the system.
+4.usermod  #Modifies an existing user account.
+5.who  #Displays who is currently logged into the system.
+6.last  #Shows the last logins of users.
+7.sudo addgroup groupname #Creates a new group.
+8.sudo gpasswd -d username groupname  #Remove a user from a group:
+9.groups username   #Shows the groups a user is a member of.
+10.getent group groupname  #View group information
+
+
+#alias commands
+1.alias -p #print all the currently defined aliases in the shell session
+2.alias command=new "command_name"
+3.alias l="ls"
+now l will give list of all files as ls used to .
+
+#bash scripting
+1.#!/  --shebang
+2. for loop and if else
+eg find the no div by 3 or 5 but not 15 b/w 1 and 100
+      #!/bin/bash
+      #print no b/w 1-100 divisible by or  3 but not 15
+
+        for i in {1..100}; do
+         if  ([ `expr $i % 3` == 0 ] || [ `expr $i % 5` == 0 ]) && [ `expr $i % 15 ` != 0 ];
+        then
+        echo $i
+         fi;
+         done
+
+
+
